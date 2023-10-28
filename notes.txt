@@ -1,2 +1,1 @@
-debian bullseye
-
+debian 20.04 Focal Fossa
