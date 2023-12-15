@@ -1,7 +1,14 @@
 debian 20.04 Focal Fossa
 
 must update rc.local
+#
+ip route show
+#
+echo 1 > /proc/sys/net/ipv4/ip_forward
+#
+iptables --list
+#
 # IP masqurade 
 iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
 iptables -A FORWARD -i eth0 -o wlan0 -j ACCEPT
-
+#
